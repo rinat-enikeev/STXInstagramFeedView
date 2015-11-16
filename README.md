@@ -24,7 +24,8 @@ pod "STXInstagramFeedView"
 
 ## Author
 
-Rinat Enikeev, rinat.enikeev@gmail.com
+Original work Copyright (c) 2014 2359 Media Pte Ltd.
+Modified work Copyright (c) 2015 Rinat Enikeev 
 
 ## License
 
