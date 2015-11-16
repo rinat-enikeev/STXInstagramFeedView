@@ -17,6 +17,7 @@
 #import "STXUserItem.h"
 #import "UIButton+STXButton.h"
 #import "UIImage+STXImage.h"
+#import "UIImageView+Circling.h"
 #import "UIViewController+Indicator.h"
 #import "UIViewController+Sharing.h"
 

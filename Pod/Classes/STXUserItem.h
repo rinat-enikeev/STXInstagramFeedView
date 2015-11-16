@@ -10,9 +10,12 @@
 
 @protocol STXUserItem <NSObject>
 
+@property (nonatomic, strong) UIImage *profilePicture;
+
+- (NSURL *)profilePictureURL;
+
 - (NSString *)userID;
 - (NSString *)username;
 - (NSString *)fullname;
-- (NSURL *)profilePictureURL;
 
 @end

@@ -10,6 +10,7 @@
 #import <STXInstagramFeedView/STXDynamicTableView.h>
 
 #import "STXPost.h"
+#import "UIImageView+Circling.h"
 
 #define PHOTO_CELL_ROW 0
 
@@ -85,18 +86,33 @@
 #pragma mark - STXFeedPhotoCellDelegate
 - (void)feedCellWillBeDisplayed:(STXFeedPhotoCell *)cell
 {
-    // TODO: load images for cell.profileImageView;
+    // TODO: load images
     
-    // here, controller (not view) should download image on will display
+    // here, controller (not view) should download image on willDisplayCell
     UIImage* postStdImage = cell.postItem.standardImage;
     if (postStdImage == nil) {
         // YOU MUST REPLACE THIS SAMPLE CODE. DO IT IN BACKGROUND
+        // THIS IS A BOTTLENECK - you will find this place =)
         NSURL * imageUrl = [cell.postItem standardImageURL];
         NSData* data = [NSData dataWithContentsOfURL:imageUrl];
         postStdImage = [UIImage imageWithData:data];
         cell.postItem.standardImage = postStdImage;
     }
     cell.postImageView.image = postStdImage;
+    
+    UIImage* profilePicture = cell.postItem.user.profilePicture;
+    if (profilePicture == nil) {
+        // YOU MUST REPLACE THIS SAMPLE CODE. DO IT IN BACKGROUND
+        // THIS IS A BOTTLENECK - you will find this place =)
+        NSURL * imageUrl = [cell.postItem.user profilePictureURL];
+        NSData* data = [NSData dataWithContentsOfURL:imageUrl];
+        profilePicture = [UIImage imageWithData:data];
+        cell.postItem.user.profilePicture = profilePicture;
+    }
+
+    // TODO: add ProfilePlaceholder image to project
+    
+    [cell.profileImageView setCircledImageFrom:profilePicture placeholderImage:[UIImage imageNamed:@"ProfilePlaceholder"] borderWidth:2];
 }
 
 #pragma mark - Feed

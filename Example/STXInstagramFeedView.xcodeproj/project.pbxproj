@@ -11,6 +11,7 @@
 		0E28F1291BFA58A900C0A7F4 /* STXPost.m in Sources */ = {isa = PBXBuildFile; fileRef = 0E28F1251BFA58A900C0A7F4 /* STXPost.m */; };
 		0E28F12A1BFA58A900C0A7F4 /* STXUser.m in Sources */ = {isa = PBXBuildFile; fileRef = 0E28F1271BFA58A900C0A7F4 /* STXUser.m */; };
 		0E28F12C1BFA5AA200C0A7F4 /* instagram_media_popular.json in Resources */ = {isa = PBXBuildFile; fileRef = 0E28F12B1BFA5AA200C0A7F4 /* instagram_media_popular.json */; };
+		0E28F1341BFA6C4D00C0A7F4 /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0E28F1331BFA6C4D00C0A7F4 /* QuartzCore.framework */; };
 		6003F58E195388D20070C39A /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6003F58D195388D20070C39A /* Foundation.framework */; };
 		6003F590195388D20070C39A /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6003F58F195388D20070C39A /* CoreGraphics.framework */; };
 		6003F592195388D20070C39A /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6003F591195388D20070C39A /* UIKit.framework */; };
@@ -47,6 +48,7 @@
 		0E28F1261BFA58A900C0A7F4 /* STXUser.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = STXUser.h; sourceTree = "<group>"; };
 		0E28F1271BFA58A900C0A7F4 /* STXUser.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = STXUser.m; sourceTree = "<group>"; };
 		0E28F12B1BFA5AA200C0A7F4 /* instagram_media_popular.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = instagram_media_popular.json; sourceTree = "<group>"; };
+		0E28F1331BFA6C4D00C0A7F4 /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
 		5F0B9119E87F84A04AC1C45C /* Pods-STXInstagramFeedView_Example.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-STXInstagramFeedView_Example.release.xcconfig"; path = "Pods/Target Support Files/Pods-STXInstagramFeedView_Example/Pods-STXInstagramFeedView_Example.release.xcconfig"; sourceTree = "<group>"; };
 		6003F58A195388D20070C39A /* STXInstagramFeedView_Example.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = STXInstagramFeedView_Example.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		6003F58D195388D20070C39A /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
@@ -83,6 +85,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				0E28F1341BFA6C4D00C0A7F4 /* QuartzCore.framework in Frameworks */,
 				6003F590195388D20070C39A /* CoreGraphics.framework in Frameworks */,
 				6003F592195388D20070C39A /* UIKit.framework in Frameworks */,
 				6003F58E195388D20070C39A /* Foundation.framework in Frameworks */,
@@ -141,6 +144,7 @@
 		6003F58C195388D20070C39A /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				0E28F1331BFA6C4D00C0A7F4 /* QuartzCore.framework */,
 				6003F58D195388D20070C39A /* Foundation.framework */,
 				6003F58F195388D20070C39A /* CoreGraphics.framework */,
 				6003F591195388D20070C39A /* UIKit.framework */,

@@ -12,6 +12,8 @@
 
 @interface STXUser : NSObject <STXUserItem>
 
+@property (nonatomic, strong) UIImage *profilePicture;
+
 - (instancetype)initWithDictionary:(NSDictionary *)dictionary;
 
 @end

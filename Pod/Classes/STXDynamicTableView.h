@@ -15,6 +15,7 @@
 
 #import "UIViewController+Indicator.h"
 #import "UIViewController+Sharing.h"
+#import "UIImageView+Circling.h"
 
 #import "STXFeedPhotoCell.h"
 #import "STXLikesCell.h"
