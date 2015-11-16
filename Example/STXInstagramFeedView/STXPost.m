@@ -154,13 +154,12 @@
     return self.link;
 }
 
-// { addedByRinat
 - (NSURL *)standardImageURL
 {
     return self.imageURL;
 }
 
-// Yes, dummy
+// Yes, dummy - same url
 - (NSURL *)lowImageURL
 {
     return self.imageURL;
@@ -170,7 +169,6 @@
 {
     return self.imageURL;
 }
-// }
 
 - (NSArray *)comments
 {

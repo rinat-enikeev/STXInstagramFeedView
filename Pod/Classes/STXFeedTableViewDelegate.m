@@ -67,8 +67,6 @@ static CGFloat const UserActionCellHeight = 44;
     [tableView deselectRowAtIndexPath:indexPath animated:NO];
 }
 
-// { addedByRinat
-
 -(void)tableView:(UITableView *)tableView willDisplayCell:(UITableViewCell *)cell forRowAtIndexPath:(NSIndexPath *)indexPath {
     if (indexPath.row == PHOTO_CELL_ROW) {
         if ([cell isKindOfClass:[STXFeedPhotoCell class]]) {
@@ -77,7 +75,6 @@ static CGFloat const UserActionCellHeight = 44;
         }
     }
 }
-// }
 
 #pragma mark - Row Updates
 

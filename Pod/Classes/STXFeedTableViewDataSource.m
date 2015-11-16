@@ -67,12 +67,6 @@
     NSString *CellIdentifier = NSStringFromClass([STXFeedPhotoCell class]);
     STXFeedPhotoCell *cell = [tableView dequeueReusableCellWithIdentifier:CellIdentifier forIndexPath:indexPath];
     cell.selectionStyle = UITableViewCellSelectionStyleNone;
-   
-    // { fixme
-//    if (cell.indexPath != nil && cell.indexPath.section != indexPath.section) {
-//        [cell cancelImageLoading];
-//    }
-    // }
   
     cell.indexPath = indexPath;
     

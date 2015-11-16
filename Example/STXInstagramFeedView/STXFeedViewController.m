@@ -82,14 +82,12 @@
     [self.tableView reloadData];
 }
 
-// { addedByRinat
 #pragma mark - STXFeedPhotoCellDelegate
 - (void)feedCellWillBeDisplayed:(STXFeedPhotoCell *)cell
 {
-    // TODO: load images
-    //    cell.profileImageView;
+    // TODO: load images for cell.profileImageView;
     
-    // here, controller should download image on will display
+    // here, controller (not view) should download image on will display
     UIImage* postStdImage = cell.postItem.standardImage;
     if (postStdImage == nil) {
         // YOU MUST REPLACE THIS SAMPLE CODE. DO IT IN BACKGROUND
@@ -100,7 +98,6 @@
     }
     cell.postImageView.image = postStdImage;
 }
-// }
 
 #pragma mark - Feed
 
@@ -162,15 +159,6 @@
 
 - (void)userWillShare:(STXUserActionCell *)userActionCell
 {
-    // fixme (used images) {
-    //    id<STXPostItem> postItem = userActionCell.postItem;
-    //
-    //    NSIndexPath *photoCellIndexPath = [NSIndexPath indexPathForRow:PHOTO_CELL_ROW inSection:userActionCell.indexPath.section];
-    //    STXFeedPhotoCell *photoCell = (STXFeedPhotoCell *)[self.tableView cellForRowAtIndexPath:photoCellIndexPath];
-    //    UIImage *photoImage = photoCell.photoImage;
-    
-    //    [self shareImage:photoImage text:postItem.captionText url:postItem.sharedURL];
-    // }
     
 }
 

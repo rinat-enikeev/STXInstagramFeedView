@@ -13,7 +13,6 @@
 
 @protocol STXPostItem <NSObject>
 
-// { addedByRinat
 @property (nonatomic, strong) UIImage *standardImage;
 @property (nonatomic, strong) UIImage *thumbImage;
 @property (nonatomic, strong) UIImage *lowImage;
@@ -21,7 +20,6 @@
 - (NSURL *)standardImageURL;
 - (NSURL *)thumbImageURL;
 - (NSURL *)lowImageURL;
-// {
 
 - (NSString *)postID;
 - (NSDate *)postDate;

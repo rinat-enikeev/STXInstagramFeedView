@@ -12,11 +12,9 @@
 
 @interface STXPost : NSObject <STXPostItem>
 
-// { addedByRinat
 @property (nonatomic, strong) UIImage *standardImage;
 @property (nonatomic, strong) UIImage *lowImage;
 @property (nonatomic, strong) UIImage *thumbImage;
-// }
 
 - (instancetype)initWithDictionary:(NSDictionary *)dictionary;
 

@@ -56,32 +56,8 @@
         id<STXUserItem> userItem = [postItem user];
         NSString *name = [userItem fullname];
         self.profileLabel.text = name;
-        
-        // { fixme all comments below
-        
-//        NSURL *profilePhotoURL = [userItem profilePictureURL];
-//        [self.profileImageView setCircleImageWithURL:profilePhotoURL placeholderImage:[UIImage imageNamed:@"ProfilePlaceholder"] borderWidth:2];
-        
-//        [self.postImageView setImageWithURL:postItem.photoURL];
     }
 }
-//
-//- (UIImage *)photoImage
-//{
-//    _photoImage = self.postImageView.image;
-//    return _photoImage; 
-//}
-
-//- (void)cancelImageLoading
-//{
-//    [self.profileImageView cancelImageRequestOperation];
-//    [self.profileImageView setCircleImageWithURL:nil placeholderImage:[UIImage imageNamed:@"ProfilePlaceholder"]];
-    
-//    [self.postImageView cancelImageRequestOperation];
-//    self.postImageView.image = nil;
-//}
-
-// }
 
 #pragma mark - Actions
 

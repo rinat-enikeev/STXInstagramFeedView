@@ -14,12 +14,9 @@
 
 @protocol STXFeedPhotoCellDelegate <NSObject>
 
-// { addedByRinat
-- (void)feedCellWillBeDisplayed:(STXFeedPhotoCell*)cell;
-// }
-
 @optional
 
+- (void)feedCellWillBeDisplayed:(STXFeedPhotoCell*)cell; // use to load images
 - (void)feedCellWillShowPoster:(id <STXUserItem>)poster;
 
 @end
@@ -32,10 +29,7 @@
 @property (weak, nonatomic) IBOutlet UIImageView *postImageView;
 
 @property (strong, nonatomic) id <STXPostItem> postItem;
-//@property (strong, nonatomic) UIImage *photoImage; fixme
 
 @property (weak, nonatomic) id <STXFeedPhotoCellDelegate> delegate;
-
-//- (void)cancelImageLoading; fixme
 
 @end
