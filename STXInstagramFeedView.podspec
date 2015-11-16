@@ -9,7 +9,7 @@
 Pod::Spec.new do |s|
   s.name             = "STXInstagramFeedView"
   s.version          = "0.1.0"
-  s.summary          = "A short description of STXInstagramFeedView."
+  s.summary          = "Instagram feed table view."
 
 # This description is used to generate tags and improve search results.
 #   * Think: What does it do? Why did you write it? What is the focus?
@@ -17,24 +17,31 @@ Pod::Spec.new do |s|
 #   * Write the description between the DESC delimiters below.
 #   * Finally, don't worry about the indent, CocoaPods strips it!  
   s.description      = <<-DESC
+                        STXInstagramFeedView displays instagram posts as in the original app.
                        DESC
 
-  s.homepage         = "https://github.com/<GITHUB_USERNAME>/STXInstagramFeedView"
+  s.homepage         = "https://github.com/rinat-enikeev/STXInstagramFeedView"
   # s.screenshots     = "www.example.com/screenshots_1", "www.example.com/screenshots_2"
   s.license          = 'MIT'
   s.author           = { "Rinat Enikeev" => "rinat.enikeev@gmail.com" }
-  s.source           = { :git => "https://github.com/<GITHUB_USERNAME>/STXInstagramFeedView.git", :tag => s.version.to_s }
+  s.source           = { :git => "https://github.com/STXInstagramFeedView/STXInstagramFeedView.git", :tag => s.version.to_s }
   # s.social_media_url = 'https://twitter.com/<TWITTER_USERNAME>'
 
-  s.platform     = :ios, '7.0'
+  s.platform     = :ios, '7.1'
   s.requires_arc = true
 
   s.source_files = 'Pod/Classes/**/*'
   s.resource_bundles = {
-    'STXInstagramFeedView' => ['Pod/Assets/*.png']
+    'STXInstagramFeedView' => ['Pod/Assets/**/*.xib']
   }
 
-  # s.public_header_files = 'Pod/Classes/**/*.h'
-  # s.frameworks = 'UIKit', 'MapKit'
-  # s.dependency 'AFNetworking', '~> 2.3'
+  s.public_header_files = 'Pod/Classes/**/*.h'
+  s.frameworks = 'UIKit'
+  s.dependency 'TTTAttributedLabel'
+  s.dependency 'PureLayout'
+  s.dependency 'KZPropertyMapper'
+  s.dependency 'MHPrettyDate'
+  s.dependency 'UALogger'
+
+  s.prefix_header_contents = '#import <UALogger/UALogger.h>', '#import <PureLayout/PureLayout.h>', '#import <TTTAttributedLabel/TTTAttributedLabel.h>', '#import <MHPrettyDate/MHPrettyDate.h>'
 end

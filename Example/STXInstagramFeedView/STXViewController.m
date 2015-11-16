@@ -7,6 +7,7 @@
 //
 
 #import "STXViewController.h"
+#import <STXInstagramFeedView/STXDynamicTableView.h>
 
 @interface STXViewController ()
 
