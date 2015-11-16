@@ -3,13 +3,13 @@
   "version": "0.1.0",
   "summary": "Instagram feed table view.",
   "description": "STXInstagramFeedView displays instagram posts as in the original app.",
-  "homepage": "https://github.com/rinat-enikeev/STXInstagramFeedView",
+  "homepage": "https://github.com/rinat-enikeev/STXInstagramFeedView.git",
   "license": "MIT",
   "authors": {
     "Rinat Enikeev": "rinat.enikeev@gmail.com"
   },
   "source": {
-    "git": "https://github.com/STXInstagramFeedView/STXInstagramFeedView.git",
+    "git": "https://github.com/rinat-enikeev/STXInstagramFeedView.git",
     "tag": "0.1.0"
   },
   "platforms": {
@@ -19,7 +19,7 @@
   "source_files": "Pod/Classes/**/*",
   "resource_bundles": {
     "STXInstagramFeedView": [
-      "Pod/Assets/**/*.xib"
+      "Pod/Classes/**/*.xib"
     ]
   },
   "public_header_files": "Pod/Classes/**/*.h",

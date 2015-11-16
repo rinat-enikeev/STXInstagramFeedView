@@ -8,6 +8,6 @@
 
 @import UIKit;
 
-@interface STXViewController : UIViewController
+@interface STXFeedViewController : UIViewController
 
 @end

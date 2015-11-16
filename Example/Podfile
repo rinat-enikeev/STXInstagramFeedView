@@ -3,6 +3,7 @@ use_frameworks!
 
 target 'STXInstagramFeedView_Example', :exclusive => true do
   pod "STXInstagramFeedView", :path => "../"
+  pod 'KZPropertyMapper'
 end
 
 target 'STXInstagramFeedView_Tests', :exclusive => true do

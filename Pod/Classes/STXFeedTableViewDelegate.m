@@ -70,7 +70,6 @@ static CGFloat const UserActionCellHeight = 44;
 // { addedByRinat
 
 -(void)tableView:(UITableView *)tableView willDisplayCell:(UITableViewCell *)cell forRowAtIndexPath:(NSIndexPath *)indexPath {
-    NSLog(@"SDF");
     if (indexPath.row == PHOTO_CELL_ROW) {
         if ([cell isKindOfClass:[STXFeedPhotoCell class]]) {
             STXFeedPhotoCell * photoCell = (STXFeedPhotoCell *)cell;

@@ -13,4 +13,6 @@
 #ifdef __OBJC__
     @import UIKit;
     @import Foundation;
+    #import <STXInstagramFeedView/STXDynamicTableView.h>
+    #import <KZPropertyMapper/KZPropertyMapper.h>
 #endif

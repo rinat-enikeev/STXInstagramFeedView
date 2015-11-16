@@ -15,6 +15,7 @@ PODS:
 
 DEPENDENCIES:
   - Expecta
+  - KZPropertyMapper
   - Specta
   - STXInstagramFeedView (from `../`)
 
@@ -28,7 +29,7 @@ SPEC CHECKSUMS:
   MHPrettyDate: e0e5975041f0210c0542f4c5d7e3e44d1a8537be
   PureLayout: f35f5384c9c4e4479df041dbe33ad7577b71ddfb
   Specta: ac94d110b865115fe60ff2c6d7281053c6f8e8a2
-  STXInstagramFeedView: 82a12efb3d0ac4f70fdb59e0687bc82939825e3e
+  STXInstagramFeedView: 1b08fa86ed85be430f98fc7afc9bdaaeb828779b
   TTTAttributedLabel: 0a2ac7b2dd726d32a070dafb01446026b11e624f
   UALogger: ccc041e5982dbd274ab5805f914076fef9bf29cf
 

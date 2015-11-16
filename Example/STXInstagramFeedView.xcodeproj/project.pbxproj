@@ -7,13 +7,17 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		0E28F1281BFA58A900C0A7F4 /* STXComment.m in Sources */ = {isa = PBXBuildFile; fileRef = 0E28F1231BFA58A900C0A7F4 /* STXComment.m */; };
+		0E28F1291BFA58A900C0A7F4 /* STXPost.m in Sources */ = {isa = PBXBuildFile; fileRef = 0E28F1251BFA58A900C0A7F4 /* STXPost.m */; };
+		0E28F12A1BFA58A900C0A7F4 /* STXUser.m in Sources */ = {isa = PBXBuildFile; fileRef = 0E28F1271BFA58A900C0A7F4 /* STXUser.m */; };
+		0E28F12C1BFA5AA200C0A7F4 /* instagram_media_popular.json in Resources */ = {isa = PBXBuildFile; fileRef = 0E28F12B1BFA5AA200C0A7F4 /* instagram_media_popular.json */; };
 		6003F58E195388D20070C39A /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6003F58D195388D20070C39A /* Foundation.framework */; };
 		6003F590195388D20070C39A /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6003F58F195388D20070C39A /* CoreGraphics.framework */; };
 		6003F592195388D20070C39A /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6003F591195388D20070C39A /* UIKit.framework */; };
 		6003F598195388D20070C39A /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 6003F596195388D20070C39A /* InfoPlist.strings */; };
 		6003F59A195388D20070C39A /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 6003F599195388D20070C39A /* main.m */; };
 		6003F59E195388D20070C39A /* STXAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 6003F59D195388D20070C39A /* STXAppDelegate.m */; };
-		6003F5A7195388D20070C39A /* STXViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6003F5A6195388D20070C39A /* STXViewController.m */; };
+		6003F5A7195388D20070C39A /* STXFeedViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6003F5A6195388D20070C39A /* STXFeedViewController.m */; };
 		6003F5A9195388D20070C39A /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 6003F5A8195388D20070C39A /* Images.xcassets */; };
 		6003F5B0195388D20070C39A /* XCTest.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6003F5AF195388D20070C39A /* XCTest.framework */; };
 		6003F5B1195388D20070C39A /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6003F58D195388D20070C39A /* Foundation.framework */; };
@@ -36,6 +40,13 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		0E28F1221BFA58A900C0A7F4 /* STXComment.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = STXComment.h; sourceTree = "<group>"; };
+		0E28F1231BFA58A900C0A7F4 /* STXComment.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = STXComment.m; sourceTree = "<group>"; };
+		0E28F1241BFA58A900C0A7F4 /* STXPost.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = STXPost.h; sourceTree = "<group>"; };
+		0E28F1251BFA58A900C0A7F4 /* STXPost.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = STXPost.m; sourceTree = "<group>"; };
+		0E28F1261BFA58A900C0A7F4 /* STXUser.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = STXUser.h; sourceTree = "<group>"; };
+		0E28F1271BFA58A900C0A7F4 /* STXUser.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = STXUser.m; sourceTree = "<group>"; };
+		0E28F12B1BFA5AA200C0A7F4 /* instagram_media_popular.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = instagram_media_popular.json; sourceTree = "<group>"; };
 		5F0B9119E87F84A04AC1C45C /* Pods-STXInstagramFeedView_Example.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-STXInstagramFeedView_Example.release.xcconfig"; path = "Pods/Target Support Files/Pods-STXInstagramFeedView_Example/Pods-STXInstagramFeedView_Example.release.xcconfig"; sourceTree = "<group>"; };
 		6003F58A195388D20070C39A /* STXInstagramFeedView_Example.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = STXInstagramFeedView_Example.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		6003F58D195388D20070C39A /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
@@ -47,8 +58,8 @@
 		6003F59B195388D20070C39A /* STXInstagramFeedView-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "STXInstagramFeedView-Prefix.pch"; sourceTree = "<group>"; };
 		6003F59C195388D20070C39A /* STXAppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = STXAppDelegate.h; sourceTree = "<group>"; };
 		6003F59D195388D20070C39A /* STXAppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = STXAppDelegate.m; sourceTree = "<group>"; };
-		6003F5A5195388D20070C39A /* STXViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = STXViewController.h; sourceTree = "<group>"; };
-		6003F5A6195388D20070C39A /* STXViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = STXViewController.m; sourceTree = "<group>"; };
+		6003F5A5195388D20070C39A /* STXFeedViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = STXFeedViewController.h; sourceTree = "<group>"; };
+		6003F5A6195388D20070C39A /* STXFeedViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = STXFeedViewController.m; sourceTree = "<group>"; };
 		6003F5A8195388D20070C39A /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		6003F5AE195388D20070C39A /* STXInstagramFeedView_Tests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = STXInstagramFeedView_Tests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		6003F5AF195388D20070C39A /* XCTest.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = XCTest.framework; path = Library/Frameworks/XCTest.framework; sourceTree = DEVELOPER_DIR; };
@@ -93,11 +104,24 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		0E28F1211BFA589400C0A7F4 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				0E28F1221BFA58A900C0A7F4 /* STXComment.h */,
+				0E28F1231BFA58A900C0A7F4 /* STXComment.m */,
+				0E28F1241BFA58A900C0A7F4 /* STXPost.h */,
+				0E28F1251BFA58A900C0A7F4 /* STXPost.m */,
+				0E28F1261BFA58A900C0A7F4 /* STXUser.h */,
+				0E28F1271BFA58A900C0A7F4 /* STXUser.m */,
+			);
+			name = Models;
+			sourceTree = "<group>";
+		};
 		6003F581195388D10070C39A = {
 			isa = PBXGroup;
 			children = (
 				60FF7A9C1954A5C5007DD14C /* Podspec Metadata */,
-				6003F593195388D20070C39A /* Example for STXInstagramFeedView */,
+				6003F593195388D20070C39A /* Example of STXInstagramFeedView */,
 				6003F5B5195388D20070C39A /* Tests */,
 				6003F58C195388D20070C39A /* Frameworks */,
 				6003F58B195388D20070C39A /* Products */,
@@ -127,24 +151,26 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
-		6003F593195388D20070C39A /* Example for STXInstagramFeedView */ = {
+		6003F593195388D20070C39A /* Example of STXInstagramFeedView */ = {
 			isa = PBXGroup;
 			children = (
+				0E28F1211BFA589400C0A7F4 /* Models */,
 				6003F59C195388D20070C39A /* STXAppDelegate.h */,
 				6003F59D195388D20070C39A /* STXAppDelegate.m */,
 				873B8AEA1B1F5CCA007FD442 /* Main.storyboard */,
-				6003F5A5195388D20070C39A /* STXViewController.h */,
-				6003F5A6195388D20070C39A /* STXViewController.m */,
+				6003F5A5195388D20070C39A /* STXFeedViewController.h */,
+				6003F5A6195388D20070C39A /* STXFeedViewController.m */,
 				6003F5A8195388D20070C39A /* Images.xcassets */,
 				6003F594195388D20070C39A /* Supporting Files */,
 			);
-			name = "Example for STXInstagramFeedView";
+			name = "Example of STXInstagramFeedView";
 			path = STXInstagramFeedView;
 			sourceTree = "<group>";
 		};
 		6003F594195388D20070C39A /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				0E28F12B1BFA5AA200C0A7F4 /* instagram_media_popular.json */,
 				6003F595195388D20070C39A /* STXInstagramFeedView-Info.plist */,
 				6003F596195388D20070C39A /* InfoPlist.strings */,
 				6003F599195388D20070C39A /* main.m */,
@@ -279,6 +305,7 @@
 				873B8AEB1B1F5CCA007FD442 /* Main.storyboard in Resources */,
 				6003F5A9195388D20070C39A /* Images.xcassets in Resources */,
 				6003F598195388D20070C39A /* InfoPlist.strings in Resources */,
+				0E28F12C1BFA5AA200C0A7F4 /* instagram_media_popular.json in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -390,8 +417,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				0E28F12A1BFA58A900C0A7F4 /* STXUser.m in Sources */,
 				6003F59E195388D20070C39A /* STXAppDelegate.m in Sources */,
-				6003F5A7195388D20070C39A /* STXViewController.m in Sources */,
+				0E28F1281BFA58A900C0A7F4 /* STXComment.m in Sources */,
+				6003F5A7195388D20070C39A /* STXFeedViewController.m in Sources */,
+				0E28F1291BFA58A900C0A7F4 /* STXPost.m in Sources */,
 				6003F59A195388D20070C39A /* main.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
