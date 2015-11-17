@@ -8,7 +8,7 @@
 
 Pod::Spec.new do |s|
   s.name             = "STXInstagramFeedView"
-  s.version          = "0.1.1"
+  s.version          = "0.1.2"
   s.summary          = "Instagram feed table view."
 
 # This description is used to generate tags and improve search results.
@@ -39,7 +39,6 @@ Pod::Spec.new do |s|
   s.frameworks = 'UIKit'
   s.dependency 'TTTAttributedLabel'
   s.dependency 'PureLayout'
-  s.dependency 'KZPropertyMapper'
   s.dependency 'MHPrettyDate'
   s.dependency 'UALogger'
 

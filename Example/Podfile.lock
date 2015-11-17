@@ -5,7 +5,6 @@ PODS:
   - PureLayout (3.0.1)
   - Specta (1.0.5)
   - STXInstagramFeedView (0.1.1):
-    - KZPropertyMapper
     - MHPrettyDate
     - PureLayout
     - TTTAttributedLabel
@@ -29,7 +28,7 @@ SPEC CHECKSUMS:
   MHPrettyDate: e0e5975041f0210c0542f4c5d7e3e44d1a8537be
   PureLayout: f35f5384c9c4e4479df041dbe33ad7577b71ddfb
   Specta: ac94d110b865115fe60ff2c6d7281053c6f8e8a2
-  STXInstagramFeedView: c8fc464b41ceabdbd68f684e07d80f1f581477dc
+  STXInstagramFeedView: 0ad042c6ec8cd135491267e4629312a967130db7
   TTTAttributedLabel: 0a2ac7b2dd726d32a070dafb01446026b11e624f
   UALogger: ccc041e5982dbd274ab5805f914076fef9bf29cf
 

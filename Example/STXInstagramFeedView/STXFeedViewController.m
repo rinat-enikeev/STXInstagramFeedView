@@ -86,8 +86,9 @@
 #pragma mark - STXFeedPhotoCellDelegate
 - (void)feedCellWillBeDisplayed:(STXFeedPhotoCell *)cell
 {
+    
+    cell.postImageView.image = cell.postItem.standardImage;
     if (cell.postItem.standardImage == nil) {
-        
         dispatch_async(dispatch_get_global_queue( DISPATCH_QUEUE_PRIORITY_DEFAULT, 0), ^{
             NSURL * imageUrl = [cell.postItem standardImageURL];
             NSData* data = [NSData dataWithContentsOfURL:imageUrl];
@@ -98,6 +99,8 @@
             });
         });
     }
+    
+    cell.profileImageView.image = cell.postItem.user.profilePicture;
     
     if (cell.postItem.user.profilePicture == nil) {
         dispatch_async(dispatch_get_global_queue( DISPATCH_QUEUE_PRIORITY_DEFAULT, 0), ^{

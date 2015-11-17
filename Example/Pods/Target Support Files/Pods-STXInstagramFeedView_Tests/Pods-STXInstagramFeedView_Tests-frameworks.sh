@@ -84,7 +84,6 @@ strip_invalid_archs() {
 
 
 if [[ "$CONFIGURATION" == "Debug" ]]; then
-  install_framework "Pods-STXInstagramFeedView_Tests/KZPropertyMapper.framework"
   install_framework "Pods-STXInstagramFeedView_Tests/MHPrettyDate.framework"
   install_framework "Pods-STXInstagramFeedView_Tests/PureLayout.framework"
   install_framework "Pods-STXInstagramFeedView_Tests/STXInstagramFeedView.framework"
@@ -94,7 +93,6 @@ if [[ "$CONFIGURATION" == "Debug" ]]; then
   install_framework "Pods-STXInstagramFeedView_Tests/Specta.framework"
 fi
 if [[ "$CONFIGURATION" == "Release" ]]; then
-  install_framework "Pods-STXInstagramFeedView_Tests/KZPropertyMapper.framework"
   install_framework "Pods-STXInstagramFeedView_Tests/MHPrettyDate.framework"
   install_framework "Pods-STXInstagramFeedView_Tests/PureLayout.framework"
   install_framework "Pods-STXInstagramFeedView_Tests/STXInstagramFeedView.framework"
