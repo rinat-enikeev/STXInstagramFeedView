@@ -1,6 +1,6 @@
 {
   "name": "STXInstagramFeedView",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "summary": "Instagram feed table view.",
   "description": "STXInstagramFeedView displays instagram posts as in the original app.",
   "homepage": "https://github.com/rinat-enikeev/STXInstagramFeedView.git",
@@ -10,7 +10,7 @@
   },
   "source": {
     "git": "https://github.com/rinat-enikeev/STXInstagramFeedView.git",
-    "tag": "0.1.0"
+    "tag": "0.1.1"
   },
   "platforms": {
     "ios": "7.1"
