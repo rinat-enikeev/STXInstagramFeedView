@@ -5,22 +5,22 @@
 [![License](https://img.shields.io/cocoapods/l/STXInstagramFeedView.svg?style=flat)](http://cocoapods.org/pods/STXInstagramFeedView)
 [![Platform](https://img.shields.io/cocoapods/p/STXInstagramFeedView.svg?style=flat)](http://cocoapods.org/pods/STXInstagramFeedView)
 
-## Credits
-This pod is fork of https://github.com/2359media/STXDynamicTableView. 
-
 ## Usage
 
 To run the example project, clone the repo, and run `pod install` from the Example directory first.
 
-## Requirements
-
 ## Installation
 
-TODO: explain
-
 ```ruby
+source 'https://github.com/rinat-enikeev/CocoaPodsSpecs.git'
+
+...
+
 pod "STXInstagramFeedView"
 ```
+
+## Credits
+This pod is fork of https://github.com/2359media/STXDynamicTableView. 
 
 ## Author
 
