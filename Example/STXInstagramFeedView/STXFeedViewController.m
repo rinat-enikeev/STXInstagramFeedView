@@ -12,8 +12,6 @@
 #import "STXPost.h"
 #import "UIImageView+Circling.h"
 
-#define PHOTO_CELL_ROW 0
-
 @interface STXFeedViewController () <STXFeedPhotoCellDelegate, STXLikesCellDelegate, STXCaptionCellDelegate, STXCommentCellDelegate, STXUserActionDelegate>
 
 @property (weak, nonatomic) IBOutlet UITableView *tableView;

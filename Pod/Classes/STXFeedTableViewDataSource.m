@@ -39,11 +39,13 @@
         _controller = controller;
         
         NSString *feedPhotoCellIdentifier = NSStringFromClass([STXFeedPhotoCell class]);
-        UINib *feedPhotoCellNib = [UINib nibWithNibName:feedPhotoCellIdentifier bundle:[NSBundle bundleForClass:[self class]]];
+        
+        NSBundle* bundle = [NSBundle bundleForClass:[self class]];
+        UINib *feedPhotoCellNib = [UINib nibWithNibName:feedPhotoCellIdentifier bundle:bundle];
         [tableView registerNib:feedPhotoCellNib forCellReuseIdentifier:feedPhotoCellIdentifier];
         
         NSString *userActionCellIdentifier = NSStringFromClass([STXUserActionCell class]);
-        UINib *userActionCellNib = [UINib nibWithNibName:userActionCellIdentifier bundle:[NSBundle bundleForClass:[self class]]];
+        UINib *userActionCellNib = [UINib nibWithNibName:userActionCellIdentifier bundle:bundle];
         [tableView registerNib:userActionCellNib forCellReuseIdentifier:userActionCellIdentifier];
    }
     
