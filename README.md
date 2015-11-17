@@ -19,6 +19,9 @@ source 'https://github.com/rinat-enikeev/CocoaPodsSpecs.git'
 pod "STXInstagramFeedView"
 ```
 
+## TODO
+Eliminate warnigns. Tests. Documentaion. 
+
 ## Credits
 This pod is fork of https://github.com/2359media/STXDynamicTableView. 
 
