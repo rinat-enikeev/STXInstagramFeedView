@@ -32,7 +32,7 @@ PODS:
   - RKValueTransformers (1.1.2)
   - SOCKit (1.1)
   - Specta (1.0.5)
-  - STXInstagramFeedView (0.1.6):
+  - STXInstagramFeedView (0.1.7):
     - InstaModel
     - MHPrettyDate
     - PureLayout
@@ -65,7 +65,7 @@ SPEC CHECKSUMS:
   RKValueTransformers: 66ac5e4f077fdbe3496e792d89eeff4c3eb67701
   SOCKit: c7376ac262bea9115b8f749358f762522a47d392
   Specta: ac94d110b865115fe60ff2c6d7281053c6f8e8a2
-  STXInstagramFeedView: e396d24811f72a1e7da32687549381b463d1df60
+  STXInstagramFeedView: 52bf949ed668720648e597f0338b2afd48cf70f9
   TransitionKit: 9ceccda4cd0cdc0a05ef85eb235e5a3292c3c250
   TTTAttributedLabel: 0a2ac7b2dd726d32a070dafb01446026b11e624f
   UALogger: ccc041e5982dbd274ab5805f914076fef9bf29cf
