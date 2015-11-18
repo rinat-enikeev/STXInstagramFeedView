@@ -14,7 +14,7 @@
             buildForArchiving = "YES">
             <BuildableReference
                BuildableIdentifier = 'primary'
-               BlueprintIdentifier = '1928FE13DA199903DD927014'
+               BlueprintIdentifier = '830F2DD0BF04228777CCEC0F'
                BlueprintName = 'STXInstagramFeedView'
                ReferencedContainer = 'container:Pods.xcodeproj'
                BuildableName = 'STXInstagramFeedView.framework'>

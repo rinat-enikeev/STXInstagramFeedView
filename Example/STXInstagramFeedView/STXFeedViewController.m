@@ -13,11 +13,11 @@
 
 @interface STXFeedViewController () <STXFeedPhotoCellDelegate, STXLikesCellDelegate, STXCaptionCellDelegate, STXCommentCellDelegate, STXUserActionDelegate>
 
-@property (weak, nonatomic) IBOutlet UITableView *tableView;
 @property (strong, nonatomic) UIActivityIndicatorView *activityIndicatorView;
-
 @property (strong, nonatomic) STXFeedTableViewDataSource *tableViewDataSource;
 @property (strong, nonatomic) STXFeedTableViewDelegate *tableViewDelegate;
+
+@property (strong, nonatomic) InstaKit* instaKit;
 
 @end
 
@@ -27,8 +27,9 @@
 {
     [super viewDidLoad];
     
-    self.title = NSLocalizedString(@"Feed", nil);
+    self.instaKit = [[InstaKit alloc] initWithClientId:@"24fc1af302d3442c86e5e3c1e8708015" dbFileName:@"dbFile"];
     
+    self.title = NSLocalizedString(@"Feed", nil);
     self.tableView.separatorStyle = UITableViewCellSeparatorStyleNone;
     
     STXFeedTableViewDataSource *dataSource = [[STXFeedTableViewDataSource alloc] initWithController:self tableView:self.tableView];
@@ -42,6 +43,10 @@
     self.activityIndicatorView = [self activityIndicatorViewOnView:self.view];
     
     [self loadFeed];
+    
+    // Initialize Refresh Control
+    self.refreshControl = [[UIRefreshControl alloc] init];
+    [self.refreshControl addTarget:self action:@selector(loadFeed) forControlEvents:UIControlEventValueChanged];
 }
 
 - (void)dealloc
@@ -119,15 +124,17 @@
 - (void)loadFeed
 {
     
-    InstaKit* kit = [[InstaKit alloc] initWithClientId:@"24fc1af302d3442c86e5e3c1e8708015" dbFileName:@"dbFile"];
-    [[kit postService] renewMediaPopularWithProgress:nil success:^(NSArray *objects) {
+    [[_instaKit postService] renewMediaPopularWithProgress:nil success:^(NSArray *objects) {
         self.tableViewDataSource.posts = [objects copy];
         [self.tableView reloadData];
         [self.activityIndicatorView stopAnimating];
+        [self.refreshControl endRefreshing];
     } failure:^(NSError *error) {
         [self.activityIndicatorView stopAnimating];
+        [self.refreshControl endRefreshing];
         NSLog(@"%@", error);
     }];
+    
     
 }
 

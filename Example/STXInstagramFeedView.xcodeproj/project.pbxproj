@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		0E28F12C1BFA5AA200C0A7F4 /* instagram_media_popular.json in Resources */ = {isa = PBXBuildFile; fileRef = 0E28F12B1BFA5AA200C0A7F4 /* instagram_media_popular.json */; };
 		0E28F1341BFA6C4D00C0A7F4 /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0E28F1331BFA6C4D00C0A7F4 /* QuartzCore.framework */; };
+		0E68724F1BFCC932004C77F2 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0E68724E1BFCC932004C77F2 /* Main.storyboard */; };
 		6003F58E195388D20070C39A /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6003F58D195388D20070C39A /* Foundation.framework */; };
 		6003F590195388D20070C39A /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6003F58F195388D20070C39A /* CoreGraphics.framework */; };
 		6003F592195388D20070C39A /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6003F591195388D20070C39A /* UIKit.framework */; };
@@ -22,7 +23,6 @@
 		6003F5B2195388D20070C39A /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6003F591195388D20070C39A /* UIKit.framework */; };
 		6003F5BA195388D20070C39A /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 6003F5B8195388D20070C39A /* InfoPlist.strings */; };
 		6003F5BC195388D20070C39A /* Tests.m in Sources */ = {isa = PBXBuildFile; fileRef = 6003F5BB195388D20070C39A /* Tests.m */; };
-		873B8AEB1B1F5CCA007FD442 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 873B8AEA1B1F5CCA007FD442 /* Main.storyboard */; };
 		945D773B4C1DF0574D5C78EC /* Pods_STXInstagramFeedView_Tests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E4742B25CBAE1AAED538AF54 /* Pods_STXInstagramFeedView_Tests.framework */; };
 		DD6B84DDBD88337ACFE861AA /* Pods_STXInstagramFeedView_Example.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FCFACFFF5DBA88163B6260B4 /* Pods_STXInstagramFeedView_Example.framework */; };
 /* End PBXBuildFile section */
@@ -40,6 +40,7 @@
 /* Begin PBXFileReference section */
 		0E28F12B1BFA5AA200C0A7F4 /* instagram_media_popular.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = instagram_media_popular.json; sourceTree = "<group>"; };
 		0E28F1331BFA6C4D00C0A7F4 /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
+		0E68724E1BFCC932004C77F2 /* Main.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
 		5F0B9119E87F84A04AC1C45C /* Pods-STXInstagramFeedView_Example.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-STXInstagramFeedView_Example.release.xcconfig"; path = "Pods/Target Support Files/Pods-STXInstagramFeedView_Example/Pods-STXInstagramFeedView_Example.release.xcconfig"; sourceTree = "<group>"; };
 		6003F58A195388D20070C39A /* STXInstagramFeedView_Example.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = STXInstagramFeedView_Example.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		6003F58D195388D20070C39A /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
@@ -61,7 +62,6 @@
 		6003F5BB195388D20070C39A /* Tests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Tests.m; sourceTree = "<group>"; };
 		606FC2411953D9B200FFA9A0 /* Tests-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Tests-Prefix.pch"; sourceTree = "<group>"; };
 		8353E58379B15163C2CDCBD7 /* Pods-STXInstagramFeedView_Tests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-STXInstagramFeedView_Tests.release.xcconfig"; path = "Pods/Target Support Files/Pods-STXInstagramFeedView_Tests/Pods-STXInstagramFeedView_Tests.release.xcconfig"; sourceTree = "<group>"; };
-		873B8AEA1B1F5CCA007FD442 /* Main.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
 		B48F398E9121A5834C618C62 /* LICENSE */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; name = LICENSE; path = ../LICENSE; sourceTree = "<group>"; };
 		C0AFF0A03FE45E84B34ED18C /* Pods-STXInstagramFeedView_Example.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-STXInstagramFeedView_Example.debug.xcconfig"; path = "Pods/Target Support Files/Pods-STXInstagramFeedView_Example/Pods-STXInstagramFeedView_Example.debug.xcconfig"; sourceTree = "<group>"; };
 		D3AC14D86FBDCE230639AEB6 /* STXInstagramFeedView.podspec */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; name = STXInstagramFeedView.podspec; path = ../STXInstagramFeedView.podspec; sourceTree = "<group>"; };
@@ -146,7 +146,7 @@
 				0E28F1211BFA589400C0A7F4 /* Models */,
 				6003F59C195388D20070C39A /* STXAppDelegate.h */,
 				6003F59D195388D20070C39A /* STXAppDelegate.m */,
-				873B8AEA1B1F5CCA007FD442 /* Main.storyboard */,
+				0E68724E1BFCC932004C77F2 /* Main.storyboard */,
 				6003F5A5195388D20070C39A /* STXFeedViewController.h */,
 				6003F5A6195388D20070C39A /* STXFeedViewController.m */,
 				6003F5A8195388D20070C39A /* Images.xcassets */,
@@ -291,7 +291,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				873B8AEB1B1F5CCA007FD442 /* Main.storyboard in Resources */,
+				0E68724F1BFCC932004C77F2 /* Main.storyboard in Resources */,
 				6003F5A9195388D20070C39A /* Images.xcassets in Resources */,
 				6003F598195388D20070C39A /* InfoPlist.strings in Resources */,
 				0E28F12C1BFA5AA200C0A7F4 /* instagram_media_popular.json in Resources */,
@@ -482,7 +482,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 7.1;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				ONLY_ACTIVE_ARCH = YES;
 				SDKROOT = iphoneos;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -515,7 +515,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 7.1;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				SDKROOT = iphoneos;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				VALIDATE_PRODUCT = YES;
@@ -531,7 +531,7 @@
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "STXInstagramFeedView/STXInstagramFeedView-Prefix.pch";
 				INFOPLIST_FILE = "STXInstagramFeedView/STXInstagramFeedView-Info.plist";
-				IPHONEOS_DEPLOYMENT_TARGET = 7.1;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				MODULE_NAME = ExampleApp;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				WRAPPER_EXTENSION = app;
@@ -547,7 +547,7 @@
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "STXInstagramFeedView/STXInstagramFeedView-Prefix.pch";
 				INFOPLIST_FILE = "STXInstagramFeedView/STXInstagramFeedView-Info.plist";
-				IPHONEOS_DEPLOYMENT_TARGET = 7.1;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				MODULE_NAME = ExampleApp;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				WRAPPER_EXTENSION = app;
