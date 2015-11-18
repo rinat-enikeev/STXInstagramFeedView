@@ -13,6 +13,7 @@
 
 @protocol STXUserActionDelegate <NSObject>
 
+@optional
 - (void)userWillComment:(STXUserActionCell *)userActionCell;
 - (void)userWillShare:(STXUserActionCell *)userActionCell;
 
