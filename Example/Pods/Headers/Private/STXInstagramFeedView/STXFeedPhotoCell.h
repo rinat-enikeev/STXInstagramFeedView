@@ -1,1 +1,1 @@
-../../../../../Pod/Classes/STXFeedPhotoCell.h
+../../../../../Pod/Classes/Cells/STXFeedPhotoCell.h

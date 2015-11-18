@@ -1,1 +1,1 @@
-../../../../../Pod/Classes/STXCaptionCell.h
+../../../../../Pod/Classes/Cells/STXCaptionCell.h

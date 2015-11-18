@@ -1,1 +1,1 @@
-../../../../../Pod/Classes/STXFeedTableViewDataSource.h
+../../../../../Pod/Classes/UITableViewSources/STXFeedTableViewDataSource.h

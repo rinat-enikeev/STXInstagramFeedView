@@ -1,1 +1,1 @@
-../../../../../Pod/Classes/STXUserActionCell.h
+../../../../../Pod/Classes/Cells/STXUserActionCell.h

@@ -1,1 +1,1 @@
-../../../../../Pod/Classes/STXAttributedLabel.h
+../../../../../Pod/Classes/Labels/STXAttributedLabel.h

@@ -7,9 +7,6 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		0E28F1281BFA58A900C0A7F4 /* STXComment.m in Sources */ = {isa = PBXBuildFile; fileRef = 0E28F1231BFA58A900C0A7F4 /* STXComment.m */; };
-		0E28F1291BFA58A900C0A7F4 /* STXPost.m in Sources */ = {isa = PBXBuildFile; fileRef = 0E28F1251BFA58A900C0A7F4 /* STXPost.m */; };
-		0E28F12A1BFA58A900C0A7F4 /* STXUser.m in Sources */ = {isa = PBXBuildFile; fileRef = 0E28F1271BFA58A900C0A7F4 /* STXUser.m */; };
 		0E28F12C1BFA5AA200C0A7F4 /* instagram_media_popular.json in Resources */ = {isa = PBXBuildFile; fileRef = 0E28F12B1BFA5AA200C0A7F4 /* instagram_media_popular.json */; };
 		0E28F1341BFA6C4D00C0A7F4 /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0E28F1331BFA6C4D00C0A7F4 /* QuartzCore.framework */; };
 		6003F58E195388D20070C39A /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6003F58D195388D20070C39A /* Foundation.framework */; };
@@ -41,12 +38,6 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		0E28F1221BFA58A900C0A7F4 /* STXComment.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = STXComment.h; sourceTree = "<group>"; };
-		0E28F1231BFA58A900C0A7F4 /* STXComment.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = STXComment.m; sourceTree = "<group>"; };
-		0E28F1241BFA58A900C0A7F4 /* STXPost.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = STXPost.h; sourceTree = "<group>"; };
-		0E28F1251BFA58A900C0A7F4 /* STXPost.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = STXPost.m; sourceTree = "<group>"; };
-		0E28F1261BFA58A900C0A7F4 /* STXUser.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = STXUser.h; sourceTree = "<group>"; };
-		0E28F1271BFA58A900C0A7F4 /* STXUser.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = STXUser.m; sourceTree = "<group>"; };
 		0E28F12B1BFA5AA200C0A7F4 /* instagram_media_popular.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = instagram_media_popular.json; sourceTree = "<group>"; };
 		0E28F1331BFA6C4D00C0A7F4 /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
 		5F0B9119E87F84A04AC1C45C /* Pods-STXInstagramFeedView_Example.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-STXInstagramFeedView_Example.release.xcconfig"; path = "Pods/Target Support Files/Pods-STXInstagramFeedView_Example/Pods-STXInstagramFeedView_Example.release.xcconfig"; sourceTree = "<group>"; };
@@ -110,12 +101,6 @@
 		0E28F1211BFA589400C0A7F4 /* Models */ = {
 			isa = PBXGroup;
 			children = (
-				0E28F1221BFA58A900C0A7F4 /* STXComment.h */,
-				0E28F1231BFA58A900C0A7F4 /* STXComment.m */,
-				0E28F1241BFA58A900C0A7F4 /* STXPost.h */,
-				0E28F1251BFA58A900C0A7F4 /* STXPost.m */,
-				0E28F1261BFA58A900C0A7F4 /* STXUser.h */,
-				0E28F1271BFA58A900C0A7F4 /* STXUser.m */,
 			);
 			name = Models;
 			sourceTree = "<group>";
@@ -421,11 +406,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				0E28F12A1BFA58A900C0A7F4 /* STXUser.m in Sources */,
 				6003F59E195388D20070C39A /* STXAppDelegate.m in Sources */,
-				0E28F1281BFA58A900C0A7F4 /* STXComment.m in Sources */,
 				6003F5A7195388D20070C39A /* STXFeedViewController.m in Sources */,
-				0E28F1291BFA58A900C0A7F4 /* STXPost.m in Sources */,
 				6003F59A195388D20070C39A /* main.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

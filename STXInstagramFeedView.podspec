@@ -41,6 +41,7 @@ Pod::Spec.new do |s|
   s.dependency 'PureLayout'
   s.dependency 'MHPrettyDate'
   s.dependency 'UALogger'
+  s.dependency 'InstaModel'
 
-  s.prefix_header_contents = '#import <UALogger/UALogger.h>', '#import <PureLayout/PureLayout.h>', '#import <TTTAttributedLabel/TTTAttributedLabel.h>', '#import <MHPrettyDate/MHPrettyDate.h>'
+  s.prefix_header_contents = '#import <UALogger/UALogger.h>', '#import <PureLayout/PureLayout.h>', '#import <TTTAttributedLabel/TTTAttributedLabel.h>', '#import <MHPrettyDate/MHPrettyDate.h>', '#import <InstaModel/InstaModel.h>'
 end

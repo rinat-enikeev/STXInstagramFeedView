@@ -1,1 +1,1 @@
-../../../../../Pod/Classes/UIButton+STXButton.h
+../../../../../Pod/Classes/Categories/UIButton+STXButton.h

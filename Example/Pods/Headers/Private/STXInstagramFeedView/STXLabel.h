@@ -1,1 +1,1 @@
-../../../../../Pod/Classes/STXLabel.h
+../../../../../Pod/Classes/Labels/STXLabel.h

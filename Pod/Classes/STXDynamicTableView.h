@@ -6,10 +6,6 @@
 //  Copyright (c) 2014 2359 Media Pte Ltd. All rights reserved.
 //
 
-#import "STXUserItem.h"
-#import "STXPostItem.h"
-#import "STXCommentItem.h"
-
 #import "STXFeedTableViewDelegate.h"
 #import "STXFeedTableViewDataSource.h"
 

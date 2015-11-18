@@ -1,1 +1,1 @@
-../../../../../Pod/Classes/NSString+Emoji.h
+../../../../../Pod/Classes/Categories/NSString+Emoji.h

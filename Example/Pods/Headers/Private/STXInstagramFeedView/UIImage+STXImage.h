@@ -1,1 +1,1 @@
-../../../../../Pod/Classes/UIImage+STXImage.h
+../../../../../Pod/Classes/Categories/UIImage+STXImage.h

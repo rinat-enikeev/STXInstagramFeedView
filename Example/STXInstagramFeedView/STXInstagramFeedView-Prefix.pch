@@ -15,4 +15,6 @@
     @import Foundation;
     #import <STXInstagramFeedView/STXDynamicTableView.h>
     #import <KZPropertyMapper/KZPropertyMapper.h>
+    #import <InstaModel/InstaModel.h>
+    #import <InstaKit/InstaKit.h>
 #endif

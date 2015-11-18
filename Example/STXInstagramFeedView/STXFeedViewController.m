@@ -9,7 +9,6 @@
 #import "STXFeedViewController.h"
 #import <STXInstagramFeedView/STXDynamicTableView.h>
 
-#import "STXPost.h"
 #import "UIImageView+Circling.h"
 
 @interface STXFeedViewController () <STXFeedPhotoCellDelegate, STXLikesCellDelegate, STXCaptionCellDelegate, STXCommentCellDelegate, STXUserActionDelegate>
@@ -85,29 +84,29 @@
 - (void)feedCellWillBeDisplayed:(STXFeedPhotoCell *)cell
 {
     
-    cell.postImageView.image = cell.postItem.standardImage;
-    if (cell.postItem.standardImage == nil) {
+    cell.postImageView.image = cell.postItem.imageStd.image;
+    if (cell.postItem.imageStd.image == nil) {
         dispatch_async(dispatch_get_global_queue( DISPATCH_QUEUE_PRIORITY_DEFAULT, 0), ^{
-            NSURL * imageUrl = [cell.postItem standardImageURL];
+            NSURL * imageUrl = [NSURL URLWithString:cell.postItem.imageStd.urlString];
             NSData* data = [NSData dataWithContentsOfURL:imageUrl];
             UIImage* postStdImage = [UIImage imageWithData:data];
             dispatch_async(dispatch_get_main_queue(), ^(void){
-                cell.postItem.standardImage = postStdImage;
+                cell.postItem.imageStd.image = postStdImage;
                 cell.postImageView.image = postStdImage;
             });
         });
     }
     
-    cell.profileImageView.image = cell.postItem.user.profilePicture;
+    cell.profileImageView.image = cell.postItem.author.profilePicture;
     
-    if (cell.postItem.user.profilePicture == nil) {
+    if (cell.postItem.author.profilePicture == nil) {
         dispatch_async(dispatch_get_global_queue( DISPATCH_QUEUE_PRIORITY_DEFAULT, 0), ^{
-            NSURL * imageUrl = [cell.postItem.user profilePictureURL];
+            NSURL * imageUrl = [NSURL URLWithString:[cell.postItem.author profilePictureUrl]];
             NSData* data = [NSData dataWithContentsOfURL:imageUrl];
             UIImage* profilePicture = [UIImage imageWithData:data];
             
             dispatch_async(dispatch_get_main_queue(), ^(void){
-                cell.postItem.user.profilePicture = profilePicture;
+                cell.postItem.author.profilePicture = profilePicture;
                 // todo: add ProfilePlaceholder image
                 [cell.profileImageView setCircledImageFrom:profilePicture placeholderImage:[UIImage imageNamed:@"ProfilePlaceholder"] borderWidth:2];
             });
@@ -119,40 +118,16 @@
 
 - (void)loadFeed
 {
-    NSString *feedPath = [[NSBundle mainBundle] pathForResource:@"instagram_media_popular" ofType:@"json"];
     
-    NSError *error;
-    NSData *jsonData = [NSData dataWithContentsOfFile:feedPath options:NSDataReadingMappedIfSafe error:&error];
-    if (jsonData) {
-        NSDictionary *jsonObject = [NSJSONSerialization JSONObjectWithData:jsonData options:NSJSONReadingAllowFragments error:&error];
-        if (error) {
-            NSLog(@"%@", error);
-        }
-        
-        NSDictionary *instagramPopularMediaDictionary = jsonObject;
-        if (instagramPopularMediaDictionary) {
-            NSArray *mediaDataArray = [instagramPopularMediaDictionary valueForKey:@"data"];
-            
-            NSMutableArray *posts = [NSMutableArray array];
-            for (NSDictionary *mediaDictionary in mediaDataArray) {
-                STXPost *post = [[STXPost alloc] initWithDictionary:mediaDictionary];
-                [posts addObject:post];
-            }
-            
-            self.tableViewDataSource.posts = [posts copy];
-            
-            [self.tableView reloadData];
-            
-        } else {
-            if (error) {
-                NSLog(@"%@", error);
-            }
-        }
-    } else {
-        if (error) {
-            NSLog(@"%@", error);
-        }
-    }
+    InstaKit* kit = [[InstaKit alloc] initWithClientId:@"24fc1af302d3442c86e5e3c1e8708015" dbFileName:@"dbFile"];
+    [[kit postService] renewMediaPopularWithProgress:nil success:^(NSArray *objects) {
+        self.tableViewDataSource.posts = [objects copy];
+        [self.tableView reloadData];
+        [self.activityIndicatorView stopAnimating];
+    } failure:^(NSError *error) {
+        [self.activityIndicatorView stopAnimating];
+        NSLog(@"%@", error);
+    }];
     
 }
 

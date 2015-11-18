@@ -1,1 +1,1 @@
-../../../../../Pod/Classes/STXLikesCell.h
+../../../../../Pod/Classes/Cells/STXLikesCell.h

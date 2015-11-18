@@ -1,1 +1,1 @@
-../../../../../Pod/Classes/STXFeedTableViewDelegate.h
+../../../../../Pod/Classes/UITableViewSources/STXFeedTableViewDelegate.h
