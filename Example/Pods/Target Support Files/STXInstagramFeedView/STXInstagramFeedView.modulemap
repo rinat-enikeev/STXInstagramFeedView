@@ -1,6 +1,0 @@
-framework module STXInstagramFeedView {
-  umbrella header "STXInstagramFeedView-umbrella.h"
-
-  export *
-  module * { export * }
-}
