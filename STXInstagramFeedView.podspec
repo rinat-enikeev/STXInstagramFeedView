@@ -1,6 +1,6 @@
 Pod::Spec.new do |s|
   s.name             = "STXInstagramFeedView"
-  s.version          = "0.1.6"
+  s.version          = "0.1.7"
   s.summary          = "Instagram feed table view."
   s.description      = <<-DESC
                         STXInstagramFeedView displays instagram posts as in the original app.
@@ -16,7 +16,7 @@ Pod::Spec.new do |s|
   s.platform     = :ios, '7.1'
   s.requires_arc = true
 
-  s.source_files = 'Pod/Classes/**/*'
+  s.source_files = 'Pod/Classes/**/*.{h,m}'
 
   s.resource_bundles = {
     'STXInstagramFeedView' => ['Pod/Classes/**/*.xib']
