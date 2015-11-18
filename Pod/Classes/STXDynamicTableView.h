@@ -6,15 +6,15 @@
 //  Copyright (c) 2014 2359 Media Pte Ltd. All rights reserved.
 //
 
-#import "STXFeedTableViewDelegate.h"
-#import "STXFeedTableViewDataSource.h"
+#import <STXInstagramFeedView/STXFeedTableViewDelegate.h>
+#import <STXInstagramFeedView/STXFeedTableViewDataSource.h>
 
-#import "UIViewController+Indicator.h"
-#import "UIViewController+Sharing.h"
-#import "UIImageView+Circling.h"
+#import <STXInstagramFeedView/UIViewController+Indicator.h>
+#import <STXInstagramFeedView/UIViewController+Sharing.h>
+#import <STXInstagramFeedView/UIImageView+Circling.h>
 
-#import "STXFeedPhotoCell.h"
-#import "STXLikesCell.h"
-#import "STXCaptionCell.h"
-#import "STXCommentCell.h"
-#import "STXUserActionCell.h"
+#import <STXInstagramFeedView/STXFeedPhotoCell.h>
+#import <STXInstagramFeedView/STXLikesCell.h>
+#import <STXInstagramFeedView/STXCaptionCell.h>
+#import <STXInstagramFeedView/STXCommentCell.h>
+#import <STXInstagramFeedView/STXUserActionCell.h>

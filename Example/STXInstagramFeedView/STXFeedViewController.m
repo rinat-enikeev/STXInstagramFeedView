@@ -11,8 +11,6 @@
 #import <InstaKit/InstaKit.h>
 #import <InstaModel/InstaModel.h>
 
-#import "UIImageView+Circling.h"
-
 @interface STXFeedViewController () <STXFeedPhotoCellDelegate, STXLikesCellDelegate, STXCaptionCellDelegate, STXCommentCellDelegate, STXUserActionDelegate>
 
 @property (strong, nonatomic) UIActivityIndicatorView *activityIndicatorView;
