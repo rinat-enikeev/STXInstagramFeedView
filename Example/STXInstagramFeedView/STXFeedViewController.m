@@ -8,6 +8,8 @@
 
 #import "STXFeedViewController.h"
 #import <STXInstagramFeedView/STXDynamicTableView.h>
+#import <InstaKit/InstaKit.h>
+#import <InstaModel/InstaModel.h>
 
 #import "UIImageView+Circling.h"
 
@@ -88,36 +90,57 @@
 #pragma mark - STXFeedPhotoCellDelegate
 - (void)feedCellWillBeDisplayed:(STXFeedPhotoCell *)cell
 {
-    
-    cell.postImageView.image = cell.postItem.imageStd.image;
-    if (cell.postItem.imageStd.image == nil) {
-        dispatch_async(dispatch_get_global_queue( DISPATCH_QUEUE_PRIORITY_DEFAULT, 0), ^{
-            NSURL * imageUrl = [NSURL URLWithString:cell.postItem.imageStd.urlString];
-            NSData* data = [NSData dataWithContentsOfURL:imageUrl];
-            UIImage* postStdImage = [UIImage imageWithData:data];
-            dispatch_async(dispatch_get_main_queue(), ^(void){
-                cell.postItem.imageStd.image = postStdImage;
-                cell.postImageView.image = postStdImage;
-            });
-        });
+ 
+    NSObject<InstaImage>* imgStd = cell.postItem.imageStd;
+    if (imgStd.localPath == nil) {
+        [[_instaKit blobService] renewImageBlobFor:imgStd withProgress:nil success:^(NSObject<InstaImage> *image) {
+            [self updateStdImageInPost:cell];
+        } failure:^(NSError *error) {
+            NSLog(@"%@", error.localizedDescription);
+        }];
+    } else {
+        [self updateStdImageInPost:cell];
     }
     
-    cell.profileImageView.image = cell.postItem.author.profilePicture;
-    
-    if (cell.postItem.author.profilePicture == nil) {
-        dispatch_async(dispatch_get_global_queue( DISPATCH_QUEUE_PRIORITY_DEFAULT, 0), ^{
-            NSURL * imageUrl = [NSURL URLWithString:[cell.postItem.author profilePictureUrl]];
-            NSData* data = [NSData dataWithContentsOfURL:imageUrl];
-            UIImage* profilePicture = [UIImage imageWithData:data];
-            
-            dispatch_async(dispatch_get_main_queue(), ^(void){
-                cell.postItem.author.profilePicture = profilePicture;
-                // todo: add ProfilePlaceholder image
-                [cell.profileImageView setCircledImageFrom:profilePicture placeholderImage:[UIImage imageNamed:@"ProfilePlaceholder"] borderWidth:2];
-            });
-        });
+    NSObject<InstaUser>* author = cell.postItem.author;
+    if (author.profilePictureLocalPath == nil) {
+        [[_instaKit blobService] renewProfileImageBlobFor:author withProgress:nil success:^(NSObject<InstaUser> *user) {
+            [self updateProfilePictureIn:cell];
+        } failure:^(NSError *error) {
+            NSLog(@"%@", error.localizedDescription);
+        }];
+
+    } else {
+        [self updateProfilePictureIn:cell];
     }
 }
+
+/**
+ *  @brief  Assume thatcell.postItem.imageStd.localPath is not null.
+ */
+-(void)updateStdImageInPost:(STXFeedPhotoCell *)cell {
+    NSObject<InstaImage>* imgStd = cell.postItem.imageStd;
+    dispatch_async(dispatch_get_global_queue( DISPATCH_QUEUE_PRIORITY_DEFAULT, 0), ^{
+        UIImage* postStdImage = [UIImage imageWithContentsOfFile:imgStd.localPath];
+        dispatch_async(dispatch_get_main_queue(), ^(void){
+            cell.postImageView.image = postStdImage;
+        });
+    });
+}
+
+/**
+ *  @brief  Assume that cell.postItem.author.profilePictureLocalPath is not null.
+ */
+-(void)updateProfilePictureIn:(STXFeedPhotoCell *)cell {
+    NSObject<InstaUser>* author = cell.postItem.author;
+    dispatch_async(dispatch_get_global_queue( DISPATCH_QUEUE_PRIORITY_DEFAULT, 0), ^{
+        UIImage* authorImage = [UIImage imageWithContentsOfFile:author.profilePictureLocalPath];
+        dispatch_async(dispatch_get_main_queue(), ^(void){
+            [cell.profileImageView setCircledImageFrom:authorImage placeholderImage:[UIImage imageNamed:@"ProfilePlaceholder"] borderWidth:2];
+        });
+    });
+}
+
 
 #pragma mark - Feed
 
