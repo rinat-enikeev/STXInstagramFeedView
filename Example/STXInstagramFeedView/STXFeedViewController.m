@@ -10,14 +10,26 @@
 #import <STXInstagramFeedView/STXDynamicTableView.h>
 #import <InstaKit/InstaKit.h>
 #import <InstaModel/InstaModel.h>
+#import <Reachability/Reachability.h>
+#import <TSMessages/TSMessage.h>
+#import "UIViewController+InformUser.h"
+
+NSString *const kInstagramBaseUrl = @"https://api.instagram.com/v1/";
 
 @interface STXFeedViewController () <STXFeedPhotoCellDelegate, STXLikesCellDelegate, STXCaptionCellDelegate, STXCommentCellDelegate, STXUserActionDelegate>
 
+// views
 @property (strong, nonatomic) UIActivityIndicatorView *activityIndicatorView;
+
+// services
+@property (strong, nonatomic) InstaKit* instaKit;
+
+// instagram-like feed support
 @property (strong, nonatomic) STXFeedTableViewDataSource *tableViewDataSource;
 @property (strong, nonatomic) STXFeedTableViewDelegate *tableViewDelegate;
 
-@property (strong, nonatomic) InstaKit* instaKit;
+// configurable
+@property (strong, nonatomic) NSNumber* fetchedPostsLimit;
 
 @end
 
@@ -28,10 +40,12 @@
     [super viewDidLoad];
     
     self.instaKit = [[InstaKit alloc] initWithClientId:@"24fc1af302d3442c86e5e3c1e8708015" dbFileName:@"dbFile"];
+    self.fetchedPostsLimit = @10;
     
     self.title = NSLocalizedString(@"Feed", nil);
     self.tableView.separatorStyle = UITableViewCellSeparatorStyleNone;
     
+    // 1. Delegate UITableView datasource and delegate to STX.
     STXFeedTableViewDataSource *dataSource = [[STXFeedTableViewDataSource alloc] initWithController:self tableView:self.tableView];
     self.tableView.dataSource = dataSource;
     self.tableViewDataSource = dataSource;
@@ -40,13 +54,46 @@
     self.tableView.delegate = delegate;
     self.tableViewDelegate = delegate;
     
+    // 2. Centered in table view screen activity indicator
     self.activityIndicatorView = [self activityIndicatorViewOnView:self.view];
     
-    [self loadFeed];
-    
-    // Initialize Refresh Control
+    // 3. Refresh Control
     self.refreshControl = [[UIRefreshControl alloc] init];
-    [self.refreshControl addTarget:self action:@selector(loadFeed) forControlEvents:UIControlEventValueChanged];
+    [self.refreshControl addTarget:self action:@selector(renewFeed) forControlEvents:UIControlEventValueChanged];
+    
+    // 4. Renew/fetch feed based on reachability (internet and instagram) and inform user appropriately
+    Reachability* reachability = [Reachability reachabilityForInternetConnection];
+    
+    if ([Reachability reachabilityForInternetConnection]) {
+        
+        if ([Reachability reachabilityWithHostName:kInstagramBaseUrl]) {
+            [self renewFeed];
+        } else {
+            [self informUserWithErrorMessage:NSLocalizedString(@"Instagram servers are not reachable. ", @"Instagram servers are not reachable. ") withTitle:NSLocalizedString(@"Error", @"Error")];
+            
+            reachability.reachableBlock = ^(Reachability * reachability)
+            {
+                dispatch_async(dispatch_get_main_queue(), ^{
+                    [self informUserWithSuccessMessage:NSLocalizedString(@"Instagram servers are now alive!", @"Instagram servers are now alive!") withTitle:NSLocalizedString(@"Great!", @"Great!")];
+                });
+            };
+            
+            [self fetchFeed:self.fetchedPostsLimit.integerValue];
+        }
+        
+    } else {
+        [self informUserWithWarnMessage:NSLocalizedString(@"Internet connection unavaliable. ", @"Internet connection unavaliable. ") withTitle:NSLocalizedString(@"Warning", @"Warning")];
+        
+        reachability.reachableBlock = ^(Reachability * reachability)
+        {
+            dispatch_async(dispatch_get_main_queue(), ^{
+                [self informUserWithSuccessMessage:NSLocalizedString(@"Internet connection now alive!", @"Internet connection now alive!") withTitle:NSLocalizedString(@"Great!", @"Great!")];
+            });
+        };
+        
+        [self fetchFeed:self.fetchedPostsLimit.integerValue];
+    }
+
 }
 
 - (void)dealloc
@@ -140,9 +187,23 @@
 }
 
 
-#pragma mark - Feed
+#pragma mark - Data
 
-- (void)loadFeed
+/**
+ *  @brief  Fetches posts from persistence.
+ *
+ *  @param limit maximum number of posts to fetch.
+ *
+ *  @return number of posts fetched.
+ */
+-(NSUInteger)fetchFeed:(NSUInteger)limit {
+    
+}
+
+/**
+ *  @brief  Downloads last popular posts from Instagram.
+ */
+- (void)renewFeed
 {
     
     [[_instaKit postService] renewMediaPopularWithProgress:nil success:^(NSArray *objects) {

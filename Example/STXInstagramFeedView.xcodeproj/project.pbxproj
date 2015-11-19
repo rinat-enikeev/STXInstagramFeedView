@@ -10,6 +10,7 @@
 		0E28F12C1BFA5AA200C0A7F4 /* instagram_media_popular.json in Resources */ = {isa = PBXBuildFile; fileRef = 0E28F12B1BFA5AA200C0A7F4 /* instagram_media_popular.json */; };
 		0E28F1341BFA6C4D00C0A7F4 /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0E28F1331BFA6C4D00C0A7F4 /* QuartzCore.framework */; };
 		0E68724F1BFCC932004C77F2 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0E68724E1BFCC932004C77F2 /* Main.storyboard */; };
+		0E6872A11BFD4D17004C77F2 /* UIViewController+InformUser.m in Sources */ = {isa = PBXBuildFile; fileRef = 0E6872A01BFD4D17004C77F2 /* UIViewController+InformUser.m */; };
 		6003F58E195388D20070C39A /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6003F58D195388D20070C39A /* Foundation.framework */; };
 		6003F590195388D20070C39A /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6003F58F195388D20070C39A /* CoreGraphics.framework */; };
 		6003F592195388D20070C39A /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6003F591195388D20070C39A /* UIKit.framework */; };
@@ -41,6 +42,8 @@
 		0E28F12B1BFA5AA200C0A7F4 /* instagram_media_popular.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = instagram_media_popular.json; sourceTree = "<group>"; };
 		0E28F1331BFA6C4D00C0A7F4 /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
 		0E68724E1BFCC932004C77F2 /* Main.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
+		0E68729F1BFD4D17004C77F2 /* UIViewController+InformUser.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIViewController+InformUser.h"; sourceTree = "<group>"; };
+		0E6872A01BFD4D17004C77F2 /* UIViewController+InformUser.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIViewController+InformUser.m"; sourceTree = "<group>"; };
 		5F0B9119E87F84A04AC1C45C /* Pods-STXInstagramFeedView_Example.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-STXInstagramFeedView_Example.release.xcconfig"; path = "Pods/Target Support Files/Pods-STXInstagramFeedView_Example/Pods-STXInstagramFeedView_Example.release.xcconfig"; sourceTree = "<group>"; };
 		6003F58A195388D20070C39A /* STXInstagramFeedView_Example.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = STXInstagramFeedView_Example.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		6003F58D195388D20070C39A /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
@@ -105,6 +108,15 @@
 			name = Models;
 			sourceTree = "<group>";
 		};
+		0E68729E1BFD4CF4004C77F2 /* Categories */ = {
+			isa = PBXGroup;
+			children = (
+				0E68729F1BFD4D17004C77F2 /* UIViewController+InformUser.h */,
+				0E6872A01BFD4D17004C77F2 /* UIViewController+InformUser.m */,
+			);
+			name = Categories;
+			sourceTree = "<group>";
+		};
 		6003F581195388D10070C39A = {
 			isa = PBXGroup;
 			children = (
@@ -143,6 +155,7 @@
 		6003F593195388D20070C39A /* Example of STXInstagramFeedView */ = {
 			isa = PBXGroup;
 			children = (
+				0E68729E1BFD4CF4004C77F2 /* Categories */,
 				0E28F1211BFA589400C0A7F4 /* Models */,
 				6003F59C195388D20070C39A /* STXAppDelegate.h */,
 				6003F59D195388D20070C39A /* STXAppDelegate.m */,
@@ -406,6 +419,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				0E6872A11BFD4D17004C77F2 /* UIViewController+InformUser.m in Sources */,
 				6003F59E195388D20070C39A /* STXAppDelegate.m in Sources */,
 				6003F5A7195388D20070C39A /* STXFeedViewController.m in Sources */,
 				6003F59A195388D20070C39A /* main.m in Sources */,

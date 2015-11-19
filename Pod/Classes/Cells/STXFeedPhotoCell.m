@@ -43,6 +43,12 @@
     [super setSelected:selected animated:animated];
 }
 
+-(void)prepareForReuse
+{
+    self.profileImageView.image = nil;
+    self.postImageView.image = nil;
+}
+
 - (void)setPostItem:(NSObject<InstaPost> *)postItem
 {
     if (_postItem != postItem) {

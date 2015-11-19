@@ -68,6 +68,7 @@
 {
     NSString *CellIdentifier = NSStringFromClass([STXFeedPhotoCell class]);
     STXFeedPhotoCell *cell = [tableView dequeueReusableCellWithIdentifier:CellIdentifier forIndexPath:indexPath];
+    
     cell.selectionStyle = UITableViewCellSelectionStyleNone;
   
     cell.indexPath = indexPath;
@@ -153,8 +154,9 @@
         NSOrderedSet<NSObject<InstaComment> *> *comments = [post comments];
         
         // checkme & fixme - undefined behavior (empty cells?)
-        // if commentsCount >> 0 and there is no data in instagram json
-        // is it guaranteed that comments always present (should be so)
+        // if commentsCount >> 0 and there is no data in instagram json.
+        // Is it guaranteed that comments always present (should be so)?
+        // In NEW (after 11/17/15 API there are no comments in deep json!)
         NSObject<InstaComment>* comment = comments[indexPath.row];
         
         if (indexPath.row < [comments count]) {
