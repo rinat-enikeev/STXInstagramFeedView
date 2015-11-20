@@ -7,8 +7,6 @@ target 'STXInstagramFeedView_Example', :exclusive => true do
   pod "STXInstagramFeedView", :path => "../"
   pod 'InstaModel'
   pod 'InstaKit'
-  pod 'Reachability'
-  pod 'TSMessages'
 end
 
 target 'STXInstagramFeedView_Tests', :exclusive => true do

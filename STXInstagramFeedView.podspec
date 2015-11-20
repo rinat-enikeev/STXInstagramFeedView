@@ -1,6 +1,6 @@
 Pod::Spec.new do |s|
   s.name             = "STXInstagramFeedView"
-  s.version          = "0.1.8"
+  s.version          = "0.1.9"
   s.summary          = "Instagram feed table view."
   s.description      = <<-DESC
                         STXInstagramFeedView displays instagram posts as in the original app.
@@ -29,6 +29,9 @@ Pod::Spec.new do |s|
   s.dependency 'MHPrettyDate'
   s.dependency 'UALogger'
   s.dependency 'InstaModel'
+  s.dependency 'Reachability'
+  s.dependency 'TSMessages'
+  s.dependency 'HexColors'
 
   s.prefix_header_contents = '#import <UALogger/UALogger.h>', '#import <PureLayout/PureLayout.h>', '#import <TTTAttributedLabel/TTTAttributedLabel.h>', '#import <MHPrettyDate/MHPrettyDate.h>', '#import <InstaModel/InstaModel.h>'
 end

@@ -84,18 +84,24 @@ strip_invalid_archs() {
 
 
 if [[ "$CONFIGURATION" == "Debug" ]]; then
+  install_framework "Pods-STXInstagramFeedView_Tests/HexColors.framework"
   install_framework "Pods-STXInstagramFeedView_Tests/MHPrettyDate.framework"
   install_framework "Pods-STXInstagramFeedView_Tests/PureLayout.framework"
+  install_framework "Pods-STXInstagramFeedView_Tests/Reachability.framework"
   install_framework "Pods-STXInstagramFeedView_Tests/STXInstagramFeedView.framework"
+  install_framework "Pods-STXInstagramFeedView_Tests/TSMessages.framework"
   install_framework "Pods-STXInstagramFeedView_Tests/TTTAttributedLabel.framework"
   install_framework "Pods-STXInstagramFeedView_Tests/UALogger.framework"
   install_framework "Pods-STXInstagramFeedView_Tests/Expecta.framework"
   install_framework "Pods-STXInstagramFeedView_Tests/Specta.framework"
 fi
 if [[ "$CONFIGURATION" == "Release" ]]; then
+  install_framework "Pods-STXInstagramFeedView_Tests/HexColors.framework"
   install_framework "Pods-STXInstagramFeedView_Tests/MHPrettyDate.framework"
   install_framework "Pods-STXInstagramFeedView_Tests/PureLayout.framework"
+  install_framework "Pods-STXInstagramFeedView_Tests/Reachability.framework"
   install_framework "Pods-STXInstagramFeedView_Tests/STXInstagramFeedView.framework"
+  install_framework "Pods-STXInstagramFeedView_Tests/TSMessages.framework"
   install_framework "Pods-STXInstagramFeedView_Tests/TTTAttributedLabel.framework"
   install_framework "Pods-STXInstagramFeedView_Tests/UALogger.framework"
   install_framework "Pods-STXInstagramFeedView_Tests/Expecta.framework"
