@@ -1,6 +1,6 @@
 Pod::Spec.new do |s|
   s.name             = "STXInstagramFeedView"
-  s.version          = "0.1.9"
+  s.version          = "0.1.10"
   s.summary          = "Instagram feed table view."
   s.description      = <<-DESC
                         STXInstagramFeedView displays instagram posts as in the original app.
